@@ -1,7 +1,7 @@
 #CSci 127 Teaching Staff
-#October 2017
+#November 16 2017
 #A template for a program that finds & marks closest point.
-#Modified by:  ADD YOUR NAME HERE
+#Modified by:  Alexis Severo
 
 import folium
 import pandas as pd
@@ -16,9 +16,7 @@ def getData():
      
      df = None #<-- placeholder, can remove once defined.
 
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ###################################
+     df = input("Enter CSV file name:")
 
      return(df)
 
@@ -31,9 +29,8 @@ def getColumnNames():
 
      latName, lonName = "", "" #<-- placeholder, can remove once defined.
 
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ###################################
+     latName = input("Enter column name for latitude:")
+     lonName = input("Enter column name for longitude:")
     
      return(latName,lonName)
  
@@ -46,10 +43,8 @@ def getLocale():
      """
 
      lat, lon = 0.0,0.0      #<-- placeholder, can remove once defined.
-
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ###################################   
+     lat = input("Enter current latitude:")
+     lon = input("Enter current longitude:")    
 
      return(lat, lon)
 
@@ -58,11 +53,9 @@ def computeDist(x1,y1,x2,y2):
      Computes the squared distance between two points (x1,y1) and (x2,y2) and
      Returns (x1-x2)^2 + (y1-y2)^2
      """
-     d = 0.0   #<-- placeholder, can remove once defined.
-
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ###################################
+     d = 0.0   #<-- placeholder, can remove once defined
+     d = (x1-x2)**2 + (y1-y2)**2 
+     
 
      return(d)
 
